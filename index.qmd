@@ -1,0 +1,22 @@
+---
+title: "E155 Portfolio"
+image: images/e155_headshot.jpeg
+about:
+    template: jolla
+    links:
+        - icon: linkedin
+          text: LinkedIn
+          href: www.linkedin.com/in/emmaangel
+        - icon: github
+          text: Github
+          href: https://github.com/eangel23
+---
+![](images/e155_headshot.jpg)
+
+Emma Angel is a senior at Harvey Mudd College pursuing her degree in Engineering with an interest in electrical engineering and a concentration in History. Her most recent project was a research project in which she developed and tested a custom PCB design integrated with a nordic nRF board.
+
+[Link to Github](https://github.com/eangel23)
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
