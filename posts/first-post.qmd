@@ -1,12 +1,13 @@
 ---
-title: "Hello Quarto"
-description: "Welcome to my Quarto portfolio"
-author: "Josh Brake"
-date: "8/23/24"
+title: "First blog post"
+description: "Welcome to my Quarto portfolio for E155"
+author: "Emma Angel"
+date: "8/28/25"
 categories:
   - reflection
-  - labreport
 draft: false
 ---
 
-This is my first blog post
+For my initial reflection, I want to share my goals for this class. I’m taking Microprocessors because I’m interested in electrical engineering and want to strengthen my skills on the digital side of things. I’m also taking it because embedded systems are everywhere and can be applied across many different fields.
+
+My main goal for the class is to develop a solid grasp of the concepts and learn as much as I can through the labs. I’m especially excited about working on my own custom project. I believe that with a project, you get out what you put in, and I’m looking forward to putting in the effort to deliver a fulfilling project that really shows what I’ve learned.
