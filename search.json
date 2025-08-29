@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Course Website"
+  },
+  {
+    "objectID": "labs.html#lab-2-multiplexed-7-segment-display",
+    "href": "labs.html#lab-2-multiplexed-7-segment-display",
+    "title": "Labs",
+    "section": "Lab 2: Multiplexed 7-Segment Display",
+    "text": "Lab 2: Multiplexed 7-Segment Display"
+  },
+  {
+    "objectID": "labs.html#lab-3-keypad-scanner",
+    "href": "labs.html#lab-3-keypad-scanner",
+    "title": "Labs",
+    "section": "Lab 3: Keypad Scanner",
+    "text": "Lab 3: Keypad Scanner"
+  },
+  {
+    "objectID": "labs.html#lab-4-digital-audio",
+    "href": "labs.html#lab-4-digital-audio",
+    "title": "Labs",
+    "section": "Lab 4: Digital Audio",
+    "text": "Lab 4: Digital Audio"
+  },
+  {
+    "objectID": "labs.html#lab-5-interrupts",
+    "href": "labs.html#lab-5-interrupts",
+    "title": "Labs",
+    "section": "Lab 5: Interrupts",
+    "text": "Lab 5: Interrupts"
+  },
+  {
+    "objectID": "labs.html#lab-6-the-internet-of-things-and-serial-peripheral-interface",
+    "href": "labs.html#lab-6-the-internet-of-things-and-serial-peripheral-interface",
+    "title": "Labs",
+    "section": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "text": "Lab 6: The Internet of Things and Serial Peripheral Interface"
+  },
+  {
+    "objectID": "labs.html#lab-7-the-advanced-encryption-standard",
+    "href": "labs.html#lab-7-the-advanced-encryption-standard",
+    "title": "Labs",
+    "section": "Lab 7: The Advanced Encryption Standard",
+    "text": "Lab 7: The Advanced Encryption Standard"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Emma Angel is a senior at Harvey Mudd College studying Engineering with a concentration in History. Her focus is in electrical engineering, with experience in PCB design, circuit analysis, and firmware development. She has also worked in manufacturing engineering, where she gained exposure to production processes and efforts to improve consistency and replicability.\nEmma is interested in learning more about microprocessors and embedded systems, and she enjoys developing her digital design skills through hands-on projects. She values opportunities to collaborate across disciplines to solve practical problems."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "E155 Blog",
+    "section": "",
+    "text": "First blog post\n\n\nWelcome to my Quarto portfolio for E155\n\n\n\n\n\nAug 28, 2025\n\n\nEmma Angel\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/first-post.html",
+    "href": "posts/first-post.html",
+    "title": "First blog post",
+    "section": "",
+    "text": "For my initial reflection, I want to share my goals for this class. I’m taking Microprocessors because I’m interested in electrical engineering and want to strengthen my skills on the digital side of things. I’m also taking it because embedded systems are everywhere and can be applied across many different fields.\nMy main goal for the class is to develop a solid grasp of the concepts and learn as much as I can through the labs. I’m especially excited about working on my own custom project. I believe that with a project, you get out what you put in, and I’m looking forward to putting in the effort to deliver a fulfilling project that really shows what I’ve learned."
+  }
+]
