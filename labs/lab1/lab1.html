@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lab1 – E155 Portfolio</title>
+<title>Lab 1 Report – E155 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,10 +97,45 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../labs.html"> 
-<span class="menu-text">Labs</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
+        <li>
+    <a class="dropdown-item" href="../../labs.html">
+ <span class="dropdown-text">Labs Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab1/lab1.html">
+ <span class="dropdown-text">Lab 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab2/lab2.html">
+ <span class="dropdown-text">Lab 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab3/lab3.html">
+ <span class="dropdown-text">Lab 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab4/lab4.html">
+ <span class="dropdown-text">Lab 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab5/lab5.html">
+ <span class="dropdown-text">Lab 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab6/lab6.html">
+ <span class="dropdown-text">Lab 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab7/lab7.html">
+ <span class="dropdown-text">Lab 7</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../resources.html"> 
 <span class="menu-text">Resources</span></a>
@@ -116,17 +151,136 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a>
+  <ul class="collapse">
+  <li><a href="#design-overview" id="toc-design-overview" class="nav-link" data-scroll-target="#design-overview">Design Overview</a></li>
+  <li><a href="#testing-procedure" id="toc-testing-procedure" class="nav-link" data-scroll-target="#testing-procedure">Testing Procedure</a></li>
+  </ul></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation</a>
+  <ul class="collapse">
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source Code</a></li>
+  <li><a href="#block-diagram" id="toc-block-diagram" class="nav-link" data-scroll-target="#block-diagram">Block diagram</a></li>
+  <li><a href="#schematics" id="toc-schematics" class="nav-link" data-scroll-target="#schematics">Schematics</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 1 Report</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab, a design was implemented on the FPGA to program a seven segment display, from 0 to F given a binary input. LEDs were also programmed with set logic given the input, one LED was programmed to blink at 2.4 Hz.</p>
+</section>
+<section id="design-and-testing-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h2>
+<section id="design-overview" class="level3">
+<h3 class="anchored" data-anchor-id="design-overview">Design Overview</h3>
+<p>The first step in the design was to determine the logic needed for the LEDs which resulted in an XOR, AND gates. The blinking LED used the on-board high-speed oscillator to generate a 48 MHz clock signal, then a counter was used at a cycle of 10000000 to generate a 2.4 Hz blinking frequency. The second part of the design included the 7 segment display module that mapped the binary input to the neccesary segments that need to be turned on to the display the digit.</p>
+</section>
+<section id="testing-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="testing-procedure">Testing Procedure</h3>
+<p>The design was tested using automatic testbenches in Questa. Testbenches were written for both the top module and the 7 segment display module. Testvectors with inputs and expected output values were given to compare the program outputs to the expected outputs. The waveforms were generated and compared to show that all 16 input values matches the segment display and led expectations. These simulations confirmed the physical behavior expected from the board.</p>
+</section>
+</section>
+<section id="technical-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h2>
+<section id="source-code" class="level3">
+<h3 class="anchored" data-anchor-id="source-code">Source Code</h3>
+<p><a href="https://github.com/eangel23/e155-lab1">Github Lab 1</a></p>
+</section>
+<section id="block-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagram">Block diagram</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/block-diagram-lab1.jpg" class="img-fluid figure-img"></p>
+<figcaption>Block diagram of Verilog Design</figcaption>
+</figure>
+</div>
+<p>The block diagram in Figure 1 demonstrates the overall architecture of the design. The top module includes the led controls utilizing the HSOSC built in module for the clk. The submodule seven_seg handles the seven segment display outputs.</p>
+</section>
+<section id="schematics" class="level3">
+<h3 class="anchored" data-anchor-id="schematics">Schematics</h3>
+<p><img src="images/schematic-lab1.jpg" class="img-fluid" alt="Schematic of physical circuit"> Figure 2 shows the physical layout of the design with the 4 input switches on the left and on the right the 7 segment LEDS along with the 3 external LEDs. For all LEDs a 1k ohm resistor was used to limit current draw. The input swithes were all configured with 100k ohm internal pullup resistors.</p>
+<section id="calculation-for-current-draw" class="level4">
+<h4 class="anchored" data-anchor-id="calculation-for-current-draw">Calculation for current draw</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/calculation-lab1.jpg" class="img-fluid figure-img"></p>
+<figcaption>Current draw calculation</figcaption>
+</figure>
+</div>
+<p>Figure 3 shows the current draw calculation for each seven segment LED display. Using the forward voltage from the data sheet and a standard 1k ohm resistor we can solve for the current through the LED which comes out to 1.3 mA. This current is pretty standard for an LED and is well under the absolute maximum forward current of 20 mA (from the datasheet).</p>
+</section>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+<section id="testbench-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="testbench-simulation">Testbench Simulation</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/top-tb.png" class="img-fluid figure-img"></p>
+<figcaption>Top module testbench</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/seven-seg-tb.png" class="img-fluid figure-img"></p>
+<figcaption>7 segment testbench</figcaption>
+</figure>
+</div>
+<p>The design met all the objectives. Shown are the QuestaSim simulations for both the top module and the seven segment module. The outputs and the expected outputs can be compared for both modules showing that all 16 inputs matched the expected outputs.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The design was succesful with the seven segment display showing the correct hex numbers. The LEDs demonstrated the correct logic and the correct blinking frequency of 2.4 Hz. From start to finish I spent ~25 hours working on this lab.</p>
+</section>
+<section id="ai-prototype-summary" class="level2">
+<h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ai-synthesize.png" class="img-fluid figure-img"></p>
+<figcaption>AI synthesized</figcaption>
+</figure>
+</div>
+<p>I gave the prompt to chatGPT and then I ran the code in raiant and the code synthesized just fine the first time. Above is screenshot showing the synthesized code.</p>
+<p>Just looking at how the ai solved the problem I can see that it seemed to define variables when maybe they weren’t really needed. However, the ouput seems right it does seem to produce the correct blinking. The LLM used localparam int which is a new variable type or at least one I haven’t seen used a lot. Althought the LLM synthesized I have a feeling there would be issues either simulating the code or testing it in hardware since that was still true for my own code. I think using AI at the end shows you that the logic and structure I used was correct and pretty standard however you need to work through it on your own in order to trust what the LLM is producing.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
