@@ -16,10 +16,11 @@ The on-board high-speed oscillator was used to generate a 48MHz clock. This was 
 ### Testing Procedure
 
 The design was testing in both hardware and in simulation. Simulated showed accurate behavior of each individual module. 
+
 ## Technical Documentation
 
 ### Source Code
-[Github Lab 2](https://github.com/eangel23/e155-lab3)
+[Github Lab 3](https://github.com/eangel23/e155-lab3)
 
 ### Block diagram
 ![Block diagram of Verilog Design](images/lab3-blockdiagram.jpg)
@@ -38,8 +39,6 @@ These are the fsms implemented for the scanning of the keypad and the debouncing
 ## Results and Discussion
 
 ### Testbench Simulation
-![Top module testbench 1](images/top1-tb.png)
-Top module testbench shows a more zoomed out version of all the signals.
 
 Simulations were done but not shown here.
 
