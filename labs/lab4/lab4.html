@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lab4 – E155 Portfolio</title>
+<title>Lab 3 Report – E155 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,17 +151,113 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a>
+  <ul class="collapse">
+  <li><a href="#design-overview" id="toc-design-overview" class="nav-link" data-scroll-target="#design-overview">Design Overview</a></li>
+  <li><a href="#testing-procedure" id="toc-testing-procedure" class="nav-link" data-scroll-target="#testing-procedure">Testing Procedure</a></li>
+  </ul></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation</a>
+  <ul class="collapse">
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source Code</a></li>
+  <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
+  <li><a href="#schematics" id="toc-schematics" class="nav-link" data-scroll-target="#schematics">Schematics</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 3 Report</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab, a design was implemented to program the MCU to configure two timers, one used to control frequency and one used to control delay of a note. The timers were then used to play a song with accurate notes and timing.</p>
+</section>
+<section id="design-and-testing-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h2>
+<section id="design-overview" class="level3">
+<h3 class="anchored" data-anchor-id="design-overview">Design Overview</h3>
+<p>The first step in the design was to develop the struct for the TIM using timers 15 and 16. This was done in the header file. The next step was to determine what registers needed to be written to and in what order for timers 15 and 16 to be configured correctly. One was configured to run a delay_millis() function and another for pwm_update() which controlled the frequency changes of the notes. Lastly, in the main.c file configuration steps were taken for GPIO pin setup and PLL clock setup. Then a loop was used to play each note in the song array.</p>
+</section>
+<section id="testing-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="testing-procedure">Testing Procedure</h3>
+<p>The design was tested by using the segger step through function to make sure the registers were changing as expected. Then the MCU output was measured with an oscilliscope to ensure the correct ssqaure wave behavior with correct frequency was outputed. Lastly, plug it into the speaker and listen to the fruits of my labor.</p>
+</section>
+</section>
+<section id="technical-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h2>
+<section id="source-code" class="level3">
+<h3 class="anchored" data-anchor-id="source-code">Source Code</h3>
+<p><a href="https://github.com/eangel23/lab4_e155">Github Lab 3</a></p>
+</section>
+<section id="calculations" class="level3">
+<h3 class="anchored" data-anchor-id="calculations">Calculations</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab4-calc-table.png" class="img-fluid figure-img"></p>
+<figcaption>1% calculations for error in frequency</figcaption>
+</figure>
+</div>
+<p>The table above shows the calculations for the ARR values and actual frequencies to then calculate the error. Below is a general walk through of the equations/steps used.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab4-calc1.jpg" class="img-fluid figure-img"></p>
+<figcaption>Walkthrough of PSC and ARR calculations</figcaption>
+</figure>
+</div>
+<p>Below are the minimum and maximum calculations for the frequency and durations. <img src="images/lab4-calc2.jpg" class="img-fluid" alt="Min/Max Calculations"></p>
+</section>
+<section id="schematics" class="level3">
+<h3 class="anchored" data-anchor-id="schematics">Schematics</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab4-schematic.jpg" class="img-fluid figure-img"></p>
+<figcaption>Schematic of physical circuit</figcaption>
+</figure>
+</div>
+<p>The example schematic Figure 9-1 in the LM368 datasheet was built using the default gain of 20. A potienometer was used for volume control at the input of the op amp.</p>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The design was successful with fur elise playing at the right pitch and tempo. Then a custom song was also played. I spent 25 hours on this lab.</p>
+</section>
+<section id="ai-prototype-summary" class="level2">
+<h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
+<p>The AI suggested that I used TIM2 which is not what I used. I used 15 and 16 because I needed two timers that were similar and could use the same struct. She calculated the PSC of 79 which is sort of in the middle of the PSCs I calculated. I used two different prescalers to match the needs of the range for each individual purpose. When it came to relevant registers I think she got the all. Maybe not all the specfic bits I had to write to but defintely got all the registers right. I didn’t even both giving the reference manual because of this. The example code is very similar to what I used except I had specific functions to update the code. She also got the part where you configure the GPIO as an alt function.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
