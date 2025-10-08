@@ -50,5 +50,4 @@ Pinout for the motor was taken from the datasheet on the website. Connecte to th
 The design was successful with the correct speed of the motor being printed at one a second with the correct direction I spent 15 hours on this lab. 
 
 ## AI Prototype Summary
-
-I had to give AI prototype some of my code for it see how to write the registers so that I can use it with the same libraries to run. 
+I had to give AI prototype some of my code for it see how to write the registers so that I can use it with the same libraries to run. I ran the AI code with the motor and it produced -0.3 revs/s at 10V which is not anywhere close to the true value of around 2.5 rev/s that it should be reading. The AI code is shown below. I ended up giving it some of my code so it ended up structuring its own code similar to mine.
