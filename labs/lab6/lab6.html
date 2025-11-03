@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lab6 – E155 Portfolio</title>
+<title>Lab 6 Report – E155 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,17 +151,103 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a>
+  <ul class="collapse">
+  <li><a href="#design-overview" id="toc-design-overview" class="nav-link" data-scroll-target="#design-overview">Design Overview</a></li>
+  <li><a href="#testing-procedure" id="toc-testing-procedure" class="nav-link" data-scroll-target="#testing-procedure">Testing Procedure</a></li>
+  </ul></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation</a>
+  <ul class="collapse">
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source Code</a></li>
+  <li><a href="#schematics" id="toc-schematics" class="nav-link" data-scroll-target="#schematics">Schematics</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 6 Report</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab, a design was implemented to program the MCU to read the temperature from a sensor using SPI communication protocol and then display that temperature on a website using an ESP8266 module over a UART link.</p>
+</section>
+<section id="design-and-testing-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h2>
+<section id="design-overview" class="level3">
+<h3 class="anchored" data-anchor-id="design-overview">Design Overview</h3>
+<p>The first step in the design was to develop the SPI library to initialize and send/receive messages on the MCU. Then the main webpage code was written in html to correctly display the temperature readings. Resolution buttons were also added so that the user can input the resolution desired for the temperature sensor readings.</p>
+</section>
+<section id="testing-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="testing-procedure">Testing Procedure</h3>
+<p>The design was tested using a logic analyzer to validate the correct SPI messages were being sent and recieved by the MCU. The design was also tested using the website to ensure that everything displayed as expected. The debug function was also used to debug discrepencies between website display values to the actual values being read.</p>
+<p>An example of an SPI transaction is shown below. <img src="images/spi-reading-lab6.jpg" class="img-fluid" alt="SPI transaction, bit resolution 8"></p>
+</section>
+</section>
+<section id="technical-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h2>
+<section id="source-code" class="level3">
+<h3 class="anchored" data-anchor-id="source-code">Source Code</h3>
+<p><a href="https://github.com/eangel23/lab6_e155">Github Lab 6</a></p>
+</section>
+<section id="schematics" class="level3">
+<h3 class="anchored" data-anchor-id="schematics">Schematics</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab6-schematic.jpg" class="img-fluid figure-img"></p>
+<figcaption>Schematic of physical circuit</figcaption>
+</figure>
+</div>
+<p>Physical circuit showing the connections between the MCU and the temperature sensor communication lines. An external LED was also used here for the LED demo control.</p>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The design was successful with the temperature displaying with the correct resolutions inputted by the user. I spent 30 hours on this lab.</p>
+</section>
+<section id="ai-prototype-summary" class="level2">
+<h2 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ai-website-lab6.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT webpage</figcaption>
+</figure>
+</div>
+<p>This is the webpage that ChatGPT outputted for me. It’s really intricate and simulates all the connections very well and accurately without there actually being any real connections. I was not expecting it to look so professional and intricate. All of the outputs for the temperature make sense. It is a really long script and took ChatGPT a minute to output the code but it worked very well.</p>
+<p>For the second prompt the code is shown below. This code would not worked if I replaced it with my own code because it doesn’t have the initialization code. The SPI send byte function looks like it would work because its nearly identical to the one I have written. The read temperature code has a slight error where it writes to an address and then reads both the lsb and msb. It would have to write to the second address in order to read the other bits of the temperature. The rest of the code for converting looks like what I have written.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
