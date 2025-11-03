@@ -1,0 +1,46 @@
+---
+title: "Lab 6 Report"
+format: html
+---
+
+## Introduction
+
+In this lab, a design was implemented to program the MCU to read the temperature from a sensor using SPI communication protocol and then display that temperature on a website using an ESP8266 module over a UART link.
+
+## Design and Testing Methodology
+
+### Design Overview
+
+The first step in the design was to develop the SPI library to initialize and send/receive messages on the MCU. Then the main webpage code was written in html to correctly display the temperature readings. Resolution buttons were also added so that the user can input the resolution desired for the temperature sensor readings. 
+
+### Testing Procedure
+
+The design was tested using a logic analyzer to validate the correct SPI messages were being sent and recieved by the MCU. The design was also tested using the website to ensure that everything displayed as expected. The debug function was also used to debug discrepencies between website display values to the actual values being read. 
+
+An example of an SPI transaction is shown below. 
+![SPI transaction, bit resolution 8](images/spi-reading-lab6.jpg)
+
+## Technical Documentation
+
+### Source Code
+[Github Lab 6](https://github.com/eangel23/lab6_e155)
+
+
+### Schematics
+![Schematic of physical circuit](images/lab6-schematic.jpg)
+
+Physical circuit showing the connections between the MCU and the temperature sensor communication lines. An external LED was also used here for the LED demo control. 
+
+## Results and Discussion
+
+## Conclusion
+
+The design was successful with the temperature displaying with the correct resolutions inputted by the user. I spent 30 hours on this lab. 
+
+## AI Prototype Summary
+
+![ChatGPT webpage](images/ai-website-lab6.png)
+
+This is the webpage that ChatGPT outputted for me. It's really intricate and simulates all the connections very well and accurately without there actually being any real connections. I was not expecting it to look so professional and intricate. All of the outputs for the temperature make sense. It is a really long script and took ChatGPT a minute to output the code but it worked very well. 
+
+For the second prompt the code is shown below. This code would not worked if I replaced it with my own code because it doesn't have the initialization code. The SPI send byte function looks like it would work because its nearly identical to the one I have written. The read temperature code has a slight error where it writes to an address and then reads both the lsb and msb. It would have to write to the second address in order to read the other bits of the temperature. The rest of the code for converting looks like what I have written. 
